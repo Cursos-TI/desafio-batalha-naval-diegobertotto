@@ -1,0 +1,24 @@
+void nivelNovato(void) {
+    const int N = 5;
+    int tab[N][N] = {0};
+
+    /* Navio vertical (3 células) a partir de (0,0) */
+    for (int r = 0; r < 3; ++r) tab[r][0] = 3;
+
+    /* Navio horizontal (3 células) a partir de (4,2) */
+    for (int c = 2; c < 5; ++c) tab[4][c] = 3;
+
+    puts("Coordenadas das partes dos navios:");
+    printf("Vertical: ");
+    for (int r = 0; r < 3; ++r) printf("(%d,%d) ", r, 0);
+    printf("\nHorizontal: ");
+    for (int c = 2; c < 5; ++c) printf("(%d,%d) ", 4, c);
+    puts("\n");
+
+    puts("Tabuleiro 5×5:");
+    for (int r = 0; r < N; ++r) {
+        for (int c = 0; c < N; ++c)
+            printf("%d ", tab[r][c]);
+        putchar('\n');
+    }
+}
